@@ -1,0 +1,811 @@
+fileFormatVersion: 2
+guid: 7f29a6512cb9947848ead59d7d15c914
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -386594123242668468
+    second: NewHyperMan_0
+  - first:
+      213: -5104684723769010266
+    second: NewHyperMan_1
+  - first:
+      213: 1877741907301295617
+    second: NewHyperMan_2
+  - first:
+      213: -5219353480574032262
+    second: NewHyperMan_3
+  - first:
+      213: 3754542052557113339
+    second: NewHyperMan_4
+  - first:
+      213: 7670552031860584255
+    second: NewHyperMan_5
+  - first:
+      213: 446255879052279713
+    second: NewHyperMan_6
+  - first:
+      213: -2028982155385294147
+    second: NewHyperMan_7
+  - first:
+      213: -6499040061245698493
+    second: NewHyperMan_8
+  - first:
+      213: -4006391748317325655
+    second: NewHyperMan_9
+  - first:
+      213: -241607443055670832
+    second: NewHyperMan_10
+  - first:
+      213: 6530437602258778212
+    second: NewHyperMan_11
+  - first:
+      213: -6327475449363725106
+    second: NewHyperMan_12
+  - first:
+      213: -9018303018581412771
+    second: NewHyperMan_13
+  - first:
+      213: -5531893360576333
+    second: NewHyperMan_14
+  - first:
+      213: 3395669643937794750
+    second: NewHyperMan_15
+  - first:
+      213: 8255649439416062373
+    second: NewHyperMan_16
+  - first:
+      213: 4292689040008538033
+    second: NewHyperMan_17
+  - first:
+      213: -3448914947684087871
+    second: NewHyperMan_18
+  - first:
+      213: 9153714527403159362
+    second: NewHyperMan_19
+  - first:
+      213: 5954090310832639657
+    second: NewHyperMan_20
+  - first:
+      213: -9137079767845174184
+    second: NewHyperMan_21
+  - first:
+      213: -3372514665186797675
+    second: NewHyperMan_22
+  - first:
+      213: 3674211091509192169
+    second: NewHyperMan_23
+  - first:
+      213: -4717091029336345225
+    second: NewHyperMan_24
+  - first:
+      213: 4138463856837266439
+    second: NewHyperMan_25
+  - first:
+      213: 6861698045604399862
+    second: NewHyperMan_26
+  - first:
+      213: -3211695054202193557
+    second: NewHyperMan_27
+  - first:
+      213: 2303134444689774154
+    second: NewHyperMan_28
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NewHyperMan_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 435
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f94d073b4294132b7865267a22c0e6
+      internalID: -386594123242668468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 435
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fd5c09722d84a4fbbe4ca8d4ef5ba5
+      internalID: -5104684723769010266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 436
+        width: 55
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6884766b61a46a7a5c575720af908e
+      internalID: 1877741907301295617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 436
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6581d12ac3dc14cd3b8fae0851bfd93a
+      internalID: -5219353480574032262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 436
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d7cf4520fc1447cbc08c3082b12e68
+      internalID: 3754542052557113339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 436
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0d2fdad0b424381ac3a13ff8498d59
+      internalID: 7670552031860584255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 437
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5e7e6a49b1e460bb8efb9068124099
+      internalID: 446255879052279713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_7
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 437
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9091f19c0df664a1781b83e6087a3c62
+      internalID: -2028982155385294147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_8
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 437
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acfba0392da243fd92b0b4de36feb5c
+      internalID: -6499040061245698493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 360
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2f6f64db9ca4dcd863fc0680947cb4
+      internalID: -4006391748317325655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 361
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9e7ae8c691241bcaf7c2ee4b1e5198
+      internalID: -241607443055670832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_11
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 361
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353993c950d414bbc841db9d80cb5997
+      internalID: 6530437602258778212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 361
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34814eb584208441b92cbd281eb7d9fe
+      internalID: -6327475449363725106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 361
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82be98788b9114b2ab78ce8c52d4106b
+      internalID: -9018303018581412771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_14
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 362
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f648507062373479cab3478dde3168a2
+      internalID: -5531893360576333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_15
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 361
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82358cca4351847e2a85b55b377e4d53
+      internalID: 3395669643937794750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_16
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 361
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325a61a1ba3df4036ae13b5aedc0e19d
+      internalID: 8255649439416062373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_17
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 361
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921c84e1cf91c48428a0529770f26d4f
+      internalID: 4292689040008538033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_18
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 361
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0a76acd938e44b5852e779ba9c7fcb
+      internalID: -3448914947684087871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 284
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f8568fb7d54491eb7650c5164de460
+      internalID: 9153714527403159362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_20
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 284
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779cc587349004790a6a4bfdadb39524
+      internalID: 5954090310832639657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_21
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 284
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e6f3d16da2f42c8b84daa5c31e5e62
+      internalID: -9137079767845174184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_22
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 284
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57c6cd256bba479d840a44856ca40b1
+      internalID: -3372514665186797675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_23
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 283
+        width: 52
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8eb10e45cc549498937f904075d04b
+      internalID: 3674211091509192169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_24
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 283
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605287030b4904f0b895165e9d449292
+      internalID: -4717091029336345225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_25
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 283
+        width: 53
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e96b015d8e794fa8b20310b3d40250b
+      internalID: 4138463856837266439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 283
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c737ea8541f774f2ebfe38d4637727fe
+      internalID: 6861698045604399862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_27
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 283
+        width: 55
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c5ccd33011f475a844622cda7f4b1b
+      internalID: -3211695054202193557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewHyperMan_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 205
+        width: 55
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7479715f2d51342078a876b10e7a20c9
+      internalID: 2303134444689774154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
