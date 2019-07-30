@@ -19,11 +19,14 @@ public class Hero : MonoBehaviour
      [SerializeField]
      private float speed = 0.3f;
 
+     private Animator _anim;
+
     // Start is called before the first frame update
     void Start()
     {
      _rigid = GetComponent<Rigidbody2D>();
      _sprite = GetComponentInChildren<SpriteRenderer>();
+     _anim = _anim = GetComponentInChildren<Animator>();
         
     }
 
@@ -37,22 +40,38 @@ public class Hero : MonoBehaviour
 
     void Movement(){
     float horizontalInput = UnityEngine.Input.GetAxisRaw("Horizontal");
+    //float verticalInput = UnityEngine.Input.GetAxisRaw("Vertical");
     if(horizontalInput == 0 || horizontalInput == 1){
         _sprite.flipX = false;
     }else {
         _sprite.flipX = true;
     }
-    Debug.Log(_sprite);
-    Debug.Log(horizontalInput);
+
+    if( horizontalInput > 0 || horizontalInput < 0){
+        _anim.SetBool("move", true);
+    } else {
+        _anim.SetBool("move", false);
+    }
+
+    // if(_grounded == true) {
+    //     _anim.SetBool("jump", true);
+    // } else{
+    //     _anim.SetBool("jump", false);
+    // }
+
+    //Debug.Log(_sprite);
+    //Debug.Log(horizontalInput);
+    Debug.Log(_grounded);
     _rigid.velocity = new Vector2(horizontalInput * speed, _rigid.velocity.y);
     if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && isGrounded() == true){
             
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             _grounded = false;
+            _anim.SetBool("jump", true);
             resetJumpNeeded = true;
             StartCoroutine(ResetJumpNeededRoutine());
-        }       
-    }
+        }     
+    } 
 
     bool isGrounded() {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1.0f, _groundLayer.value);
@@ -67,7 +86,7 @@ public class Hero : MonoBehaviour
                 return true;
         }
         return false;
-        ;
+
     }
 
     IEnumerator ResetJumpNeededRoutine(){
