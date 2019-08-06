@@ -26,7 +26,8 @@ public class Hero : MonoBehaviour
     {
      _rigid = GetComponent<Rigidbody2D>();
      _sprite = GetComponentInChildren<SpriteRenderer>();
-     _anim = _anim = GetComponentInChildren<Animator>();
+     _anim = GetComponentInChildren<Animator>();
+     _anim.SetBool("strike", false);
         
     }
 
@@ -41,10 +42,11 @@ public class Hero : MonoBehaviour
     void Movement(){
     float horizontalInput = UnityEngine.Input.GetAxisRaw("Horizontal");
     //float verticalInput = UnityEngine.Input.GetAxisRaw("Vertical");
-    if(horizontalInput == 0 || horizontalInput == 1){
-        _sprite.flipX = false;
-    }else {
+
+    if(horizontalInput < 0 ){
         _sprite.flipX = true;
+    }else if(horizontalInput > 0) {
+        _sprite.flipX = false;
     }
 
     if( horizontalInput > 0 || horizontalInput < 0){
@@ -53,6 +55,12 @@ public class Hero : MonoBehaviour
         _anim.SetBool("move", false);
     }
 
+    if(UnityEngine.Input.GetKeyDown(KeyCode.E)) {
+        _anim.SetBool("strike", true);
+    } else {
+        _anim.SetBool("strike", false);
+    };
+
     // if(_grounded == true) {
     //     _anim.SetBool("jump", true);
     // } else{
@@ -60,18 +68,25 @@ public class Hero : MonoBehaviour
     // }
 
     //Debug.Log(_sprite);
-    //Debug.Log(horizontalInput);
-    Debug.Log(_grounded);
+    Debug.Log(horizontalInput);
+    //Debug.Log(_grounded);
+
+
+    _grounded = false;
+    isGrounded();
+    _anim.SetBool("jump", !_grounded);
+
     _rigid.velocity = new Vector2(horizontalInput * speed, _rigid.velocity.y);
-    if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && isGrounded() == true){
+    if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && _grounded == true){
             
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             _grounded = false;
-            _anim.SetBool("jump", true);
+            //_anim.SetBool("jump", true);
             resetJumpNeeded = true;
             StartCoroutine(ResetJumpNeededRoutine());
-        }     
-    } 
+    }  
+      
+} 
 
     bool isGrounded() {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1.0f, _groundLayer.value);
