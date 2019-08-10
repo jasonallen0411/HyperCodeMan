@@ -16,10 +16,19 @@ public class Hero : MonoBehaviour
 
      private LayerMask _groundLayer;
      private bool resetJumpNeeded;
+     private bool strikeReady = true;                                  
      [SerializeField]
      private float speed = 0.3f;
 
      private Animator _anim;
+
+     private GameObject enemy;
+     private GameObject player;
+
+     public bool hammerHit = false;
+     public Transform lineStart, lineEnd;
+
+     RaycastHit2D hammerHitEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +37,13 @@ public class Hero : MonoBehaviour
      _sprite = GetComponentInChildren<SpriteRenderer>();
      _anim = GetComponentInChildren<Animator>();
      _anim.SetBool("strike", false);
+     enemy = GameObject.FindWithTag("Enemy");
+     player = GameObject.FindWithTag("Player");
+     
+     
+     //-16(value of y postion I want player to die)
+     //Respawn location: -6.5x 1.57y
+     //end level location: 88.05515x 2.415138y
         
     }
 
@@ -36,12 +52,31 @@ public class Hero : MonoBehaviour
     {
 
         Movement();
+        Raycasting();
         
     }
 
+    void Raycasting()
+    {
+        Debug.DrawLine(lineStart.position, lineEnd.position, Color.green);
+
+        if( Physics2D.Linecast (lineStart.position, lineEnd.position, 1 << LayerMask.NameToLayer("Enemy") ) ){
+            hammerHitEnemy = Physics2D.Linecast (lineStart.position, lineEnd.position, 1 << LayerMask.NameToLayer("Enemy"));
+            hammerHit = true;
+        } else {
+            hammerHit = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.E) && hammerHit == true){
+            Destroy (hammerHitEnemy.collider.gameObject, .5f);
+        }
+
+    }
+
+
+
     void Movement(){
     float horizontalInput = UnityEngine.Input.GetAxisRaw("Horizontal");
-    //float verticalInput = UnityEngine.Input.GetAxisRaw("Vertical");
 
     if(horizontalInput < 0 ){
         _sprite.flipX = true;
@@ -55,17 +90,20 @@ public class Hero : MonoBehaviour
         _anim.SetBool("move", false);
     }
 
-    if(UnityEngine.Input.GetKeyDown(KeyCode.E)) {
+    if(UnityEngine.Input.GetKeyDown(KeyCode.E) && strikeReady ) {
         _anim.SetBool("strike", true);
-    } else {
-        _anim.SetBool("strike", false);
-    };
+        strikeReady = false;
+        StartCoroutine(ResetStrikeRoutine());
+    } 
 
-    // if(_grounded == true) {
-    //     _anim.SetBool("jump", true);
-    // } else{
-    //     _anim.SetBool("jump", false);
-    // }
+    if(player.transform.position.y <= -16f){
+        //Destroy (player);
+        player.transform.position = new Vector2(-6.5f,1.57f);
+    }
+    if(player.transform.position.x >= 88.05515f && player.transform.position.y >= 2.415138){
+        //Destroy (player);
+        player.transform.position = new Vector2(-6.5f,1.57f);
+    }
 
     //Debug.Log(_sprite);
     Debug.Log(horizontalInput);
@@ -107,6 +145,12 @@ public class Hero : MonoBehaviour
     IEnumerator ResetJumpNeededRoutine(){
         yield return new WaitForSeconds(.1f);
         resetJumpNeeded = false;
+    }
+
+    IEnumerator ResetStrikeRoutine(){
+        yield return new WaitForSeconds(.6f);
+        strikeReady = true;
+        _anim.SetBool("strike", false);
     }
 
 }
