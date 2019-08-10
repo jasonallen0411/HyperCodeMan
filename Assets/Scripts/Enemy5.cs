@@ -1,15 +1,15 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy5 : MonoBehaviour
 {
 
     [SerializeField]
     private SpriteRenderer _sprite;
     private Rigidbody2D _rigid;    
     Transform target;
-    private GameObject enemy;
+    private GameObject enemy5;
     private GameObject player;
     private float range;
     [SerializeField]
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         
         //Debug.Log(GameObject.FindGameObjectsWithTag("Player"));
         _rigid = GetComponent<Rigidbody2D>();
-        enemy = GameObject.FindWithTag("Enemy");
+        enemy5 = GameObject.FindWithTag("Enemy4");
         player = GameObject.FindWithTag("Player");
     }
 
@@ -35,14 +35,13 @@ public class Enemy : MonoBehaviour
     {
 Movement();
 Raycasting();
-
-        if(player.transform.position.x >= -5.6){
+        
+        if(player.transform.position.x >= 42.28){
             transform.position = Vector2.MoveTowards(
             transform.position, 
             new Vector2(player.transform.position.x, player.transform.position.y), 
             speed*Time.deltaTime);
         }
-        
     }
     void Raycasting()
     {
@@ -80,13 +79,13 @@ Raycasting();
 
     //float horizontalInput = UnityEngine.Input.GetAxisRaw("Horizontal");
 
-        if(enemy.transform.position.x > player.transform.position.x){
+        if(enemy5.transform.position.x > player.transform.position.x){
             _sprite.flipX = false;
         }else {
             _sprite.flipX = true;
         }
 
-        Debug.Log(enemy.transform.position.x);
+        Debug.Log(enemy5.transform.position.x);
     }
 }
 

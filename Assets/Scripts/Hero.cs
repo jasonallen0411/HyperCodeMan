@@ -27,6 +27,7 @@ public class Hero : MonoBehaviour
 
      public bool hammerHit = false;
      public Transform lineStart, lineEnd;
+     public Transform lineStartX, lineEndX;
 
      RaycastHit2D hammerHitEnemy;
 
@@ -59,6 +60,20 @@ public class Hero : MonoBehaviour
     void Raycasting()
     {
         Debug.DrawLine(lineStart.position, lineEnd.position, Color.green);
+        Debug.DrawLine(lineStartX.position, lineEndX.position, Color.red);
+
+        if(_sprite.flipX == true){
+            if( Physics2D.Linecast (lineStartX.position, lineEndX.position, 1 << LayerMask.NameToLayer("Enemy") ) ){
+                hammerHitEnemy = Physics2D.Linecast (lineStartX.position, lineEndX.position, 1 << LayerMask.NameToLayer("Enemy"));
+                hammerHit = true;
+            } else {
+                hammerHit = false;
+            }
+
+            if(Input.GetKeyDown(KeyCode.E) && hammerHit == true){
+                Destroy (hammerHitEnemy.collider.gameObject, .5f);
+            }
+        }
 
         if( Physics2D.Linecast (lineStart.position, lineEnd.position, 1 << LayerMask.NameToLayer("Enemy") ) ){
             hammerHitEnemy = Physics2D.Linecast (lineStart.position, lineEnd.position, 1 << LayerMask.NameToLayer("Enemy"));
