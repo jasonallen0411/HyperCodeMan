@@ -90,7 +90,7 @@ Raycasting();
             _sprite.flipX = true;
         }
 
-        Debug.Log(enemy7.transform.position.x);
+        //Debug.Log(enemy7.transform.position.x);
     }
 }
 

@@ -85,7 +85,7 @@ Raycasting();
             _sprite.flipX = true;
         }
 
-        Debug.Log(enemy5.transform.position.x);
+        //Debug.Log(enemy5.transform.position.x);
     }
 }
 

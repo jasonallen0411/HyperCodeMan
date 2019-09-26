@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-
+    [SerializeField]
+    public bool attackPressed = false;
+    [SerializeField]
+    public bool jumpPressed = false;
+    [SerializeField]
+    public Joystick joystick;
+  
     [SerializeField]
     private SpriteRenderer _sprite;
      private Rigidbody2D _rigid;
@@ -40,6 +46,8 @@ public class Hero : MonoBehaviour
      _anim.SetBool("strike", false);
      enemy = GameObject.FindWithTag("Enemy");
      player = GameObject.FindWithTag("Player");
+     //Button btn = ButtonA.
+     //aBtn.onClick.AddEventListener(testBtn);
      
      
      //-16(value of y postion I want player to die)
@@ -47,16 +55,17 @@ public class Hero : MonoBehaviour
      //end level location: 88.05515x 2.415138y
         
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-
+        
         Movement();
         Raycasting();
         
     }
-
+    
     void Raycasting()
     {
         Debug.DrawLine(lineStart.position, lineEnd.position, Color.green);
@@ -73,6 +82,10 @@ public class Hero : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E) && hammerHit == true){
                 Destroy (hammerHitEnemy.collider.gameObject, .5f);
             }
+
+            if(attackPressed && hammerHit == true){
+                Destroy (hammerHitEnemy.collider.gameObject, .5f);
+            }
         }
 
         if( Physics2D.Linecast (lineStart.position, lineEnd.position, 1 << LayerMask.NameToLayer("Enemy") ) ){
@@ -86,20 +99,25 @@ public class Hero : MonoBehaviour
             Destroy (hammerHitEnemy.collider.gameObject, .5f);
         }
 
+        if(attackPressed && hammerHit == true){
+            Destroy (hammerHitEnemy.collider.gameObject, .5f);
+        }
+
     }
 
 
 
     void Movement(){
-    float horizontalInput = UnityEngine.Input.GetAxisRaw("Horizontal");
+    float horizontalKeyboardInput = UnityEngine.Input.GetAxisRaw("Horizontal");
+    float horizontalInput = joystick.Horizontal;
 
-    if(horizontalInput < 0 ){
+    if(horizontalInput < 0 || horizontalKeyboardInput < 0 ){
         _sprite.flipX = true;
-    }else if(horizontalInput > 0) {
+    }else if(horizontalInput > 0 || horizontalKeyboardInput > 0) {
         _sprite.flipX = false;
     }
 
-    if( horizontalInput > 0 || horizontalInput < 0){
+    if( horizontalInput > 0 || horizontalInput < 0 || horizontalKeyboardInput > 0 || horizontalKeyboardInput < 0){
         _anim.SetBool("move", true);
     } else {
         _anim.SetBool("move", false);
@@ -110,6 +128,11 @@ public class Hero : MonoBehaviour
         strikeReady = false;
         StartCoroutine(ResetStrikeRoutine());
     } 
+    if(attackPressed == true && strikeReady ) {
+        _anim.SetBool("strike", true);
+        strikeReady = false;
+        StartCoroutine(ResetStrikeRoutine());
+    }
 
     if(player.transform.position.y <= -16f){
         //Destroy (player);
@@ -121,7 +144,7 @@ public class Hero : MonoBehaviour
     }
 
     //Debug.Log(_sprite);
-    Debug.Log(horizontalInput);
+    //Debug.Log(horizontalInput);
     //Debug.Log(_grounded);
 
 
@@ -130,6 +153,11 @@ public class Hero : MonoBehaviour
     _anim.SetBool("jump", !_grounded);
 
     _rigid.velocity = new Vector2(horizontalInput * speed, _rigid.velocity.y);
+    
+    if(horizontalKeyboardInput != 0 ){
+        _rigid.velocity = new Vector2(horizontalKeyboardInput * speed, _rigid.velocity.y);
+    }
+
     if(UnityEngine.Input.GetKeyDown(KeyCode.Space) && _grounded == true){
             
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
@@ -138,6 +166,16 @@ public class Hero : MonoBehaviour
             resetJumpNeeded = true;
             StartCoroutine(ResetJumpNeededRoutine());
     }  
+
+    if(jumpPressed && _grounded == true){
+            
+            _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
+            _grounded = false;
+            //_anim.SetBool("jump", true);
+            resetJumpNeeded = true;
+            StartCoroutine(ResetJumpNeededRoutine());
+    }
+    
       
 } 
 
@@ -147,7 +185,7 @@ public class Hero : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.down * 0.6f, Color.green);
 
         if(hitInfo.collider != null){
-            Debug.Log("You hit " + hitInfo.collider.name);
+            //Debug.Log("You hit " + hitInfo.collider.name);
             _grounded = true;
 
             if(resetJumpNeeded == false)
