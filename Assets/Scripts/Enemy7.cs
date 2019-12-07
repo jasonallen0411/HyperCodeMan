@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy7 : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Enemy7 : MonoBehaviour
     private float range;
     [SerializeField]
     public float speed = 3f;
+
+    public float enemyHitpoint = 3f;
     public bool hit = false;
 
     public Transform enemyLineStart, enemyLineEnd;
@@ -63,6 +66,8 @@ Raycasting();
 
             if(hit == true){
                 Destroy (hitPlayer.collider.gameObject, .5f);
+                Invoke("reloadLevel", 3f);
+                // SceneManager.LoadScene("Level1");
             }
         }
 
@@ -75,6 +80,8 @@ Raycasting();
 
         if(hit == true){
             Destroy (hitPlayer.collider.gameObject, .5f);
+            Invoke("reloadLevel", 3f);
+                // SceneManager.LoadScene("Level1");
         }
 
 
@@ -92,6 +99,11 @@ Raycasting();
 
         //Debug.Log(enemy7.transform.position.x);
     }
+
+    void reloadLevel()
+     {
+     SceneManager.LoadScene("Level1");
+     }
 }
 
 //else if(enemy.transform.position.x > 0 && player.transform.position.x > 0) {

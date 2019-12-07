@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
@@ -142,6 +143,8 @@ public class Hero : MonoBehaviour
         //Destroy (player);
         player.transform.position = new Vector2(-6.5f,1.57f);
     }
+
+   
 
     //Debug.Log(_sprite);
     //Debug.Log(horizontalInput);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy6 : MonoBehaviour
 {
@@ -63,6 +64,8 @@ Raycasting();
 
             if(hit == true){
                 Destroy (hitPlayer.collider.gameObject, .5f);
+                Invoke("reloadLevel", 3f);
+                // SceneManager.LoadScene("Level1");
             }
         }
 
@@ -75,6 +78,8 @@ Raycasting();
 
         if(hit == true){
             Destroy (hitPlayer.collider.gameObject, .5f);
+            Invoke("reloadLevel", 3f);
+                // SceneManager.LoadScene("Level1");
         }
 
 
@@ -92,6 +97,11 @@ Raycasting();
 
         //Debug.Log(enemy6.transform.position.x);
     }
+
+    void reloadLevel()
+     {
+     SceneManager.LoadScene("Level1");
+     }
 }
 
 //else if(enemy.transform.position.x > 0 && player.transform.position.x > 0) {
